@@ -1,0 +1,7 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --without=makefile
+
+override_dh_installsystemd:
+	dh_installsystemd -pfirmwared --name=firmwared firmwared.service
